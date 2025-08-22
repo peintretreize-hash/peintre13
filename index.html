@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peinture et sols : rénovation d'intérieur</title>
+    <link rel="stylesheet" href="peinture.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            padding-bottom: 100px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .footer-bar {
+            position: relative;
+            margin-top: 50px;
+        }
+        /* Centrage de la vidéo */
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .video-section video {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        /* Mise en page des services */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 20px;
+        }
+        .service {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .service h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* --- CARROUSEL --- */
+        .caroussel-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .caroussel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .caroussel-contenu {
+            position: relative;
+            overflow: hidden;
+        }
+        .caroussel-element {
+            display: none;
+        }
+        .caroussel-element.actif {
+            display: block;
+        }
+        .caroussel-element img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        /* Boutons flèches */
+        .caroussel-bouton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .caroussel-bouton.prev { left: 10px; }
+        .caroussel-bouton.next { right: 10px; }
+        /* Indicateurs */
+        .caroussel-indicateurs {
+            margin-top: 10px;
+        }
+        .indicateur {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+            background: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .indicateur.actif {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <nav class="navbar">
+        <div class="titre-bandeau">
+            Peintre Treize
+        </div>
+        <div class="nav-links">
+            <a href="#">Accueil</a>
+            <a href="#services" id="btnService">Services</a>
+        </div>
+    </nav>
+</header>
+
+<a href="#footer" class="floating-btn">Faire un devis</a>
+<nav class="secondbar"></nav>
+
+<section class="hero">
+    <div class="logo-hero">
+        <img src="logopeinture.png" alt="Peinture Pro et Déco">
+    </div>
+    <div class="hero-content">
+        <h1>Peinture et sols :<br> rénovation d'intérieur</h1>
+        <p>Donnez une nouvelle vie à vos murs</p>
+        <a href="#services" class="btn">Voir nos services</a>
+    </div>
+</section>
+
+<!-- Carrousel -->
+<section class="caroussel-section">
+    <h2>Nos réalisations</h2>
+    <div class="caroussel">
+        <div class="caroussel-contenu">
+            <div class="caroussel-element actif">
+                <img src="carousel1.jpg" alt="Peinture salon">
+            </div>
+            <div class="caroussel-element">
+                <img src="carousel2.jpg" alt="Rénovation cuisine">
+            </div>
+            <div class="caroussel-element">
+                <img src="carousel3.jpg" alt="Sol rénové">
+            </div>
+        </div>
+        <!-- Boutons navigation -->
+        <button class="caroussel-bouton prev">&#10094;</button>
+        <button class="caroussel-bouton next">&#10095;</button>
+        <!-- Indicateurs -->
+        <div class="caroussel-indicateurs">
+            <span class="indicateur actif"></span>
+            <span class="indicateur"></span>
+            <span class="indicateur"></span>
+        </div>
+    </div>
+</section>
+
+<!-- Vidéo centrée -->
+<div class="video-section">
+  <video class="video-centered" autoplay muted loop playsinline>
+    <source src="diapopeinture.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture vidéo.
+  </video>
+</div>
+
+<section class="presentation">
+    <h2> Notre entreprise</h2>
+    <div class="presentation-content">
+        <div class="presentation-text">
+            <p>
+                <strong>Peintre Treize</strong>, c’est plus de 10 ans d’expertise dans la peinture et la rénovation intérieure et extérieure.
+                Nous mettons notre savoir-faire à votre service pour transformer vos espaces avec soin et professionnalisme.
+            </p>
+            <p>
+                Que ce soit pour rafraîchir vos murs, poser de la faïence, appliquer des enduits décoratifs ou réaliser des cloisons en placo,
+                notre équipe s’engage à vous offrir un résultat durable, esthétique et adapté à vos besoins.
+            </p>
+            <p>
+                <em>Votre satisfaction est notre priorité.</em>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <h1 style="text-align:center;"> Nos services</h1>
+  <div class="services-container">
+    <div class="service">
+      <h2> Peinture</h2>
+      <p>Peinture intérieure et extérieure pour redonner vie à vos murs et façades.</p>
+    </div>
+    <div class="service">
+      <h2> Faïence</h2>
+      <p>Pose de faïence et carrelage pour cuisines, salles de bain et sols élégants.</p>
+    </div>
+    <div class="service">
+      <h2> Enduit & Revêtements sols et murs</h2>
+      <p>Application d'enduits décoratifs et revêtements durables pour vos sols et murs.</p>
+    </div>
+    <div class="service">
+      <h2> Placo</h2>
+      <p>Travaux de plâtrerie et cloisons pour une finition impeccable de votre intérieur.</p>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <h2> Demandez votre devis en ligne</h2>
+
+  <form action="https://formsubmit.co/peintretreize@gmail.com@gmail.com" method="POST">
+    <!-- Options cachées -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nouveau devis depuis votre site">
+    <input type="hidden" name="_next" value="https://tonsite.com/merci.html">
+
+    <!-- Champs visibles -->
+    <input type="text" name="nom" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+
+    <select name="service" required>
+      <option value="">Choisissez un service</option>
+      <option value="Peinture">Peinture</option>
+      <option value="Faïence">Faïence</option>
+      <option value="Enduit">Enduit & Revêtements</option>
+      <option value="Placo">Placo</option>
+    </select>
+
+    <textarea name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+
+    <button type="submit">Envoyer ma demande</button>
+  </form>
+</section>
+
+<footer id="footer" class="footer-bar">
+    <div class="footer-content">
+        <div class="footer-contact">
+            <p></p>
+            <p>peintretreize@gmail.com</p>
+            <p>bouches-du-rhone</p>
+        </div>
+        <div class="footer-social">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61579379951101" target="_blank" aria-label="Facebook">
+                <img src="icons8-facebook-nouveau-50.png" alt="Facebook">
+            </a>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2025 peintre treize - Tous droits réservés</p>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPT CARROUSEL -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const carrousel = document.querySelector(".caroussel");
+  const elements = carrousel.querySelectorAll(".caroussel-element");
+  const prevBtn = carrousel.querySelector(".prev");
+  const nextBtn = carrousel.querySelector(".next");
+  const indicateurs = carrousel.querySelectorAll(".indicateur");
+
+  let indexActif = 0;
+
+  function afficherSlide(index) {
+    elements.forEach(el => el.classList.remove("actif"));
+    indicateurs.forEach(ind => ind.classList.remove("actif"));
+
+    elements[index].classList.add("actif");
+    indicateurs[index].classList.add("actif");
+  }
+
+  prevBtn.addEventListener("click", () => {
+    indexActif = (indexActif - 1 + elements.length) % elements.length;
+    afficherSlide(indexActif);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    indexActif = (indexActif + 1) % elements.length;
+    afficherSlide(indexActif);
+  });
+
+  indicateurs.forEach((ind, i) => {
+    ind.addEventListener("click", () => {
+      indexActif = i;
+      afficherSlide(indexActif);
+    });
+  });
+
+  afficherSlide(indexActif);
+});
+</script>
+
+</body>
+</html>
+
+
